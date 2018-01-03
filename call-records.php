@@ -33,8 +33,11 @@ $result = mysql_query("SELECT * FROM thingsnetwork ORDER BY id DESC LIMIT 100");
 echo "<table border='1'>
 <tr>
 <th>ID</th>
-<th>Value</th>
-<th>Payload</th>
+<th>value</th>
+<th>Raw payload</th>
+<th>Hex Payload</th>
+<th>Extracted Hex Payload</th>
+<th>Value(32bit int)</th>
 <th>Time stamp</th>
 
 </tr>";
@@ -46,8 +49,11 @@ $id = $row['id'];
 echo "<tr>";
 
 echo "<td>" . $row['id'] . "</td>";
-echo "<td>" . $row['value'] . "</td>";
+echo "<td>" . $row['value2'] . "</td>";
 echo "<td>" . $row['raw_payload'] . "</td>";
+echo "<td>" . $row['hex_payload'] . "</td>";
+echo "<td>" . $row['extracted_hex_payload'] . "</td>";
+echo "<td>" . $row['value'] . "</td>";
 echo "<td>" . $row['timestamp'] . "</td>";
 
 echo "</tr>";
